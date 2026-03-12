@@ -39,7 +39,7 @@ export default function ComingSoon() {
           ═══════════════════════════════════════════ */}
       <section className="flex min-h-screen flex-col items-center justify-center bg-azul px-6">
         <div className="text-hueso">
-          <BrandLogo size="lg" descriptorClassName="text-arena" />
+          <BrandLogo size="lg" sunClassName="text-terra" descriptorClassName="text-arena" />
         </div>
 
         {/* Separador */}

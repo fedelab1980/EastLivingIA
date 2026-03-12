@@ -1,8 +1,10 @@
 export default function BrandLogo({
   descriptorClassName = "text-current",
+  sunClassName = "text-current",
   size = "md",
 }: {
   descriptorClassName?: string;
+  sunClassName?: string;
   size?: "md" | "lg";
 }) {
   const isLg = size === "lg";
@@ -11,7 +13,7 @@ export default function BrandLogo({
     <div className="flex items-center">
       {/* Isotipo — Sol */}
       <svg
-        className={`shrink-0 h-auto ${isLg ? "mr-5 w-20 sm:w-24" : "mr-3 w-10"}`}
+        className={`shrink-0 h-auto ${sunClassName} ${isLg ? "mr-5 w-20 sm:w-24" : "mr-3 w-10"}`}
         viewBox="0 0 52 35"
         fill="none"
         stroke="currentColor"
