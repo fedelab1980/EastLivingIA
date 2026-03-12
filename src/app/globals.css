@@ -1,22 +1,30 @@
 @import "tailwindcss";
 
+/* ============================================
+   EAST LIVING — Brand Tokens
+   Reemplazá estos valores con tu manual de marca
+   ============================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colores principales — cambiar por los del manual */
+  --brand-primary: #1a365d;       /* Azul profundo (placeholder) */
+  --brand-secondary: #c9a84c;     /* Dorado/arena (placeholder) */
+  --brand-accent: #2d8a6e;        /* Verde (placeholder) */
+
+  /* Fondos y texto */
+  --background: #fafafa;
+  --foreground: #1a1a1a;
+  --muted: #6b7280;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
+  --color-muted: var(--muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
