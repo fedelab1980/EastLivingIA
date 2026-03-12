@@ -1,13 +1,17 @@
 export default function BrandLogo({
   descriptorClassName = "text-current",
+  size = "md",
 }: {
   descriptorClassName?: string;
+  size?: "md" | "lg";
 }) {
+  const isLg = size === "lg";
+
   return (
     <div className="flex items-center">
       {/* Isotipo — Sol */}
       <svg
-        className="mr-3 h-auto w-10 shrink-0"
+        className={`shrink-0 h-auto ${isLg ? "mr-5 w-20 sm:w-24" : "mr-3 w-10"}`}
         viewBox="0 0 52 35"
         fill="none"
         stroke="currentColor"
@@ -32,20 +36,20 @@ export default function BrandLogo({
 
       {/* Wordmark */}
       <div className="flex flex-col leading-none">
-        <span className="font-sans text-2xl font-black uppercase leading-none tracking-[0.15em]">
+        <span className={`font-sans font-black uppercase leading-none tracking-[0.15em] ${isLg ? "text-5xl sm:text-6xl" : "text-2xl"}`}>
           EAST
         </span>
-        <span className="font-serif text-2xl font-normal leading-none">
+        <span className={`font-serif font-normal leading-none ${isLg ? "text-5xl sm:text-6xl" : "text-2xl"}`}>
           Living
         </span>
       </div>
 
       {/* Línea vertical separadora */}
-      <div className="mx-3 h-7 w-px bg-current opacity-30" />
+      <div className={`bg-current opacity-30 ${isLg ? "mx-5 h-14 sm:h-16 w-px" : "mx-3 h-7 w-px"}`} />
 
       {/* Descriptor */}
       <div
-        className={`font-sans text-[9px] font-light uppercase leading-tight tracking-[0.2em] ${descriptorClassName}`}
+        className={`font-sans font-light uppercase leading-tight ${isLg ? "text-[11px] sm:text-xs tracking-[0.25em]" : "text-[9px] tracking-[0.2em]"} ${descriptorClassName}`}
       >
         Arquitectura
         <br />
